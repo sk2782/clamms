@@ -20,10 +20,10 @@ Tasks:
 	:caption: get_user_info.py Lambda function, with error handling
 
 	def lambda_handler(event, context):
-	    # function returns a row from our chocolate_user DynmamoDB
+	    # function returns a row from our CLAMMS_user DynmamoDB
 	    
 	    dynamodb = boto3.resource('dynamodb')
-	    table = dynamodb.Table('chocolate_user')
+	    table = dynamodb.Table('CLAMMS_user')
 	    
 	    try:
 	        response = table.get_item(

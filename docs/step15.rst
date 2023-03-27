@@ -55,17 +55,17 @@ Tasks:
 
   # Created by: Mr. Coxall
   # Created on: Dec 2019
-  # This function adds a row from our chocolate_user DynmamoDB
+  # This function adds a row from our CLAMMS_user DynmamoDB
 
   import json
   import boto3
 
 
   def lambda_handler(event, context):
-      # function returns a row from our chocolate_user DynmamoDB
+      # function returns a row from our CLAMMS_user DynmamoDB
       
       dynamodb = boto3.resource('dynamodb')
-      table = dynamodb.Table('chocolate_user')
+      table = dynamodb.Table('CLAMMS_user')
       
       try:
           response = table.put_item(

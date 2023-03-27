@@ -38,7 +38,7 @@ Tasks:
 
 	# Created by: Mr. Coxall
 	# Created on: Jan 2020
-	# This function returns a row from our chocolate_user DynamoDB
+	# This function returns a row from our CLAMMS_user DynamoDB
 
 	import json
 	import boto3
@@ -69,10 +69,10 @@ Tasks:
 
 
 	def lambda_handler(event, context):
-	    # get a row from our chocolates_user table
+	    # get a row from our CLAMMSs_user table
 	    
 	    dynamodb = boto3.resource('dynamodb')
-	    table = dynamodb.Table('chocolate_users')
+	    table = dynamodb.Table('CLAMMS_users')
 	    response = table.get_item(
 	        Key = {
 	            'email':event['email_address']
