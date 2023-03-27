@@ -69,7 +69,7 @@ Tasks:
 
 
 	def lambda_handler(event, context):
-	    # get a row from our CLAMMSs_user table
+	    # get a row from our CLAMMS_user table
 	    
 	    dynamodb = boto3.resource('dynamodb')
 	    table = dynamodb.Table('CLAMMS_users')
