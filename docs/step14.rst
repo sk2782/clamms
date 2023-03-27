@@ -35,9 +35,9 @@ HTML
       :language: html
       :linenos:
 
-  .. group-tab:: Products
+  .. group-tab:: records
 
-    .. literalinclude:: ./step14_code/products.html
+    .. literalinclude:: ./step14_code/records.html
       :language: html
       :linenos:
 
@@ -77,7 +77,7 @@ JavaScript
 
         // no javascript code
 
-  .. group-tab:: Products
+  .. group-tab:: records
 
     .. code-block:: javascript
         :linenos:
