@@ -5,7 +5,10 @@ async function getUser(email_address) {
     
     const api_url = 'https://2j9qacl6k6.execute-api.us-east-1.amazonaws.com/prod/user-profile?user_email=' + email_address;
     const api_response = await fetch(api_url);
+    const api_response_json = await api_response.json();
+    console.log(api_response_json);
     const api_data = await(api_response).json();
+
     console.log(api_data);
     
     const json_profile = JSON.parse(api_data['body']);
@@ -34,7 +37,7 @@ function getUserAttributes() {
       	alert(err);
         return;
       }
-      //console.log('session validity: ' + session.isValid());
+      console.log('session validity: ' + session.isValid());
       
       cognitoUser.getUserAttributes(function(err, result) {
 				if (err) {
@@ -42,7 +45,7 @@ function getUserAttributes() {
 					return;
 				}
 				// user email address
-				console.log(result[2].getValue());
+        console.log(result[2].getValue());
 				getUser(result[2].getValue()) 
 			});
 
